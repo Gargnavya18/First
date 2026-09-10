@@ -1,0 +1,228 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo h2{
+    color:#38bdf8;
+    font-size:35px;
+}
+
+.logo p{
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 10%;
+    min-height:90vh;
+}
+
+.left{
+    width:55%;
+}
+
+.left h1{
+    font-size:65px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.left span{
+    color:#38bdf8;
+}
+
+.left p{
+    color:#cbd5e1;
+    line-height:1.8;
+    font-size:18px;
+    margin-bottom:35px;
+    width:90%;
+}
+
+.left button{
+    padding:15px 40px;
+    border:none;
+    background:#38bdf8;
+    color:white;
+    font-size:18px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.left button:hover{
+    background:#0284c7;
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(56,189,248,.4);
+}
+
+/* ================= IMAGE ================= */
+
+.right{
+    width:40%;
+    text-align:center;
+}
+
+.right img{
+    width:380px;
+    max-width:100%;
+    border-radius:50%;
+    border:8px solid #38bdf8;
+    box-shadow:0 0 40px rgba(56,189,248,.4);
+    transition:.5s;
+}
+
+.right img:hover{
+    transform:scale(1.05);
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+    padding:80px 10%;
+    background:#111827;
+}
+
+.projects h1{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:60px;
+    color:#38bdf8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(56,189,248,.3);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h2{
+    margin:20px;
+    color:#38bdf8;
+}
+
+.card p{
+    margin:0 20px 25px;
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:50px;
+}
+
+.left,
+.right{
+    width:100%;
+}
+
+.left h1{
+    font-size:48px;
+}
+
+.left p{
+    width:100%;
+}
+
+.right img{
+    width:280px;
+    margin-bottom:40px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    gap:20px;
+}
+
+}
+
+@media(max-width:600px){
+
+.left h1{
+    font-size:38px;
+}
+
+.projects h1{
+    font-size:35px;
+}
+
+.left button{
+    width:100%;
+}
+
+}
